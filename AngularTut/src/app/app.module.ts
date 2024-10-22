@@ -7,6 +7,8 @@ import { HeaderComponent } from './Header/header.component';
 import { NavlinksComponent } from './Header/navlinks/navlinks.component';
 import { SmallbtnComponent } from './Header/smallbtn/smallbtn.component';
 import { HelptextComponent } from './Header/helptext/helptext.component';
+import { DatabindingComponent } from './databinding/databinding.component';
+import { EventbindingComponent } from './eventbinding/eventbinding.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { HelptextComponent } from './Header/helptext/helptext.component';
     HeaderComponent,
     NavlinksComponent,
     SmallbtnComponent,
-    HelptextComponent
+    HelptextComponent,
+    DatabindingComponent,
+    EventbindingComponent
   ],
   imports: [
     BrowserModule,
