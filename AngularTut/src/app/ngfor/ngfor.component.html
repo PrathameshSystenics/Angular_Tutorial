@@ -11,11 +11,13 @@
 
 <!--Listing over complex types-->
 <div class="d-flex flex-wrap gap-2 my-3 justify-content-center align-content-center">
-  <div *ngFor="let product of productItems" class="d-inline-block p-3 border border-1 border-dark rounded-4 col">
+  <div *ngFor="let product of productItems;let i=index"
+    class="d-inline-block p-3 border border-1 border-dark rounded-4 col">
     <div class="image-wrapper text-center p-2">
       <img [src]="product.image" alt="">
     </div>
     <div class="gy-2 gx-2">
+      <span class="d-block">Product {{i}}</span>
       <span class="d-block fs-5 fw-bold">
         {{product.title}}
       </span>

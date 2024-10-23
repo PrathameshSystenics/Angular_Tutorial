@@ -12,6 +12,7 @@ import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { TwowaydatabindingComponent } from './twowaydatabinding/twowaydatabinding.component';
 import { FormsModule } from '@angular/forms';
 import { NgforComponent } from './ngfor/ngfor.component';
+import { NgifComponent } from './ngif/ngif.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NgforComponent } from './ngfor/ngfor.component';
     DatabindingComponent,
     EventbindingComponent,
     TwowaydatabindingComponent,
-    NgforComponent
+    NgforComponent,
+    NgifComponent
   ],
   imports: [
     BrowserModule,
