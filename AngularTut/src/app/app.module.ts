@@ -15,6 +15,8 @@ import { NgforComponent } from './ngfor/ngfor.component';
 import { NgifComponent } from './ngif/ngif.component';
 import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
+import { CommunicationComponent } from './communication/communication.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { NgclassComponent } from './ngclass/ngclass.component';
     NgforComponent,
     NgifComponent,
     NgstyleComponent,
-    NgclassComponent
+    NgclassComponent,
+    CommunicationComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
