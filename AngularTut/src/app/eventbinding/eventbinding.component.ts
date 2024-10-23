@@ -3,7 +3,6 @@ import { Component, ElementRef, input } from '@angular/core';
 @Component({
   selector: 'eventbinding',
   templateUrl: './eventbinding.component.html',
-  styleUrl: './eventbinding.component.css'
 })
 export class EventbindingComponent {
   username: string = "Prathamesh"

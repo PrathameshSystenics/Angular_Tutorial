@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'ngclass',
   templateUrl: './ngclass.component.html',
-  styleUrl: './ngclass.component.css'
 })
 export class NgclassComponent {
   searchText: string = ""
