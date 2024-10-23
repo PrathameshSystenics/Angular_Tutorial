@@ -10,7 +10,7 @@ export class NgifComponent {
   names: string[] = ["John", "Celvin", "Kelvin", "RutherFord", "aryan", "Prathamesh", "Jadhav"]
 
   toDisplay(): boolean {
-    
+    this.searchText = this.searchText.trim()
     return this.searchText !== ""
   }
 }
