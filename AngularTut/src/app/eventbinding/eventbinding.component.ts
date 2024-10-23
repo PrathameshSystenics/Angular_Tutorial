@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, input } from '@angular/core';
 
 @Component({
   selector: 'eventbinding',
@@ -9,8 +9,9 @@ export class EventbindingComponent {
   username: string = "Prathamesh"
 
   // Event binded function
-  onUsernameChange(event: any) {
-    console.log()
-    this.username = event.target.value;
+  onUsernameChange(event: Event) {
+    const inputele = event.target as HTMLInputElement;
+
+    this.username = inputele.value;
   }
 }
