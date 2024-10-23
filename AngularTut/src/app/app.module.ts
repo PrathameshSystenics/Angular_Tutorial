@@ -9,6 +9,8 @@ import { SmallbtnComponent } from './Header/smallbtn/smallbtn.component';
 import { HelptextComponent } from './Header/helptext/helptext.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
+import { TwowaydatabindingComponent } from './twowaydatabinding/twowaydatabinding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { EventbindingComponent } from './eventbinding/eventbinding.component';
     SmallbtnComponent,
     HelptextComponent,
     DatabindingComponent,
-    EventbindingComponent
+    EventbindingComponent,
+    TwowaydatabindingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule // Defining any import are there in the project
   ],
   providers: [],
   bootstrap: [AppComponent]
