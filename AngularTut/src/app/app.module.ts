@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { NgifComponent } from './ngif/ngif.component';
 import { NgstyleComponent } from './ngstyle/ngstyle.component';
+import { NgclassComponent } from './ngclass/ngclass.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NgstyleComponent } from './ngstyle/ngstyle.component';
     TwowaydatabindingComponent,
     NgforComponent,
     NgifComponent,
-    NgstyleComponent
+    NgstyleComponent,
+    NgclassComponent
   ],
   imports: [
     BrowserModule,
