@@ -27,6 +27,7 @@ import { TemplatereferencevarComponent } from './templatereferencevar/templatere
 import { RefvarcomponentComponent } from './refvarcomponent/refvarcomponent.component';
 import { ChildcomponentComponent } from './refvarcomponent/childcomponent/childcomponent.component';
 import { ChilddetailComponent } from './refvarcomponent/childdetail/childdetail.component';
+import { ViewchildComponent } from './viewchild/viewchild.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ChilddetailComponent } from './refvarcomponent/childdetail/childdetail.
     TemplatereferencevarComponent,
     RefvarcomponentComponent,
     ChildcomponentComponent,
-    ChilddetailComponent
+    ChilddetailComponent,
+    ViewchildComponent
   ],
   imports: [
     BrowserModule,
