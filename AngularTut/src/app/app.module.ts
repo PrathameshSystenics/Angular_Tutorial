@@ -29,6 +29,7 @@ import { ChildcomponentComponent } from './refvarcomponent/childcomponent/childc
 import { ChilddetailComponent } from './refvarcomponent/childdetail/childdetail.component';
 import { ViewchildComponent } from './viewchild/viewchild.component';
 import { ViewChildrenCompComponent } from './view-children-comp/view-children-comp.component';
+import { NgtemplatecompComponent } from './ngtemplatecomp/ngtemplatecomp.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { ViewChildrenCompComponent } from './view-children-comp/view-children-co
     ChildcomponentComponent,
     ChilddetailComponent,
     ViewchildComponent,
-    ViewChildrenCompComponent
+    ViewChildrenCompComponent,
+    NgtemplatecompComponent
   ],
   imports: [
     BrowserModule,
