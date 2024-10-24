@@ -23,6 +23,7 @@ import { FilterComponent } from './output/filter/filter.component';
 import { NonrelatedComponent } from './nonrelated/nonrelated.component';
 import { ChildnamesComponent } from './nonrelated/childnames/childnames.component';
 import { SearchComponent } from './nonrelated/search/search.component';
+import { TemplatereferencevarComponent } from './templatereferencevar/templatereferencevar.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { SearchComponent } from './nonrelated/search/search.component';
     FilterComponent,
     NonrelatedComponent,
     ChildnamesComponent,
-    SearchComponent
+    SearchComponent,
+    TemplatereferencevarComponent
   ],
   imports: [
     BrowserModule,
