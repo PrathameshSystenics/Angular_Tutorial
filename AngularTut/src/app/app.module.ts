@@ -24,6 +24,9 @@ import { NonrelatedComponent } from './nonrelated/nonrelated.component';
 import { ChildnamesComponent } from './nonrelated/childnames/childnames.component';
 import { SearchComponent } from './nonrelated/search/search.component';
 import { TemplatereferencevarComponent } from './templatereferencevar/templatereferencevar.component';
+import { RefvarcomponentComponent } from './refvarcomponent/refvarcomponent.component';
+import { ChildcomponentComponent } from './refvarcomponent/childcomponent/childcomponent.component';
+import { ChilddetailComponent } from './refvarcomponent/childdetail/childdetail.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { TemplatereferencevarComponent } from './templatereferencevar/templatere
     NonrelatedComponent,
     ChildnamesComponent,
     SearchComponent,
-    TemplatereferencevarComponent
+    TemplatereferencevarComponent,
+    RefvarcomponentComponent,
+    ChildcomponentComponent,
+    ChilddetailComponent
   ],
   imports: [
     BrowserModule,
