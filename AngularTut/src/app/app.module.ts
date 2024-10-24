@@ -17,6 +17,9 @@ import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
 import { CommunicationComponent } from './communication/communication.component';
 import { ChildComponent } from './child/child.component';
+import { OutputComponent } from './output/output.component';
+import { ChildComponent as OutputChild } from './output/child/child.component';
+import { FilterComponent } from './output/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { ChildComponent } from './child/child.component';
     NgstyleComponent,
     NgclassComponent,
     CommunicationComponent,
-    ChildComponent
+    ChildComponent,
+    OutputComponent,
+    OutputChild,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
