@@ -20,6 +20,9 @@ import { ChildComponent } from './child/child.component';
 import { OutputComponent } from './output/output.component';
 import { ChildComponent as OutputChild } from './output/child/child.component';
 import { FilterComponent } from './output/filter/filter.component';
+import { NonrelatedComponent } from './nonrelated/nonrelated.component';
+import { ChildnamesComponent } from './nonrelated/childnames/childnames.component';
+import { SearchComponent } from './nonrelated/search/search.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { FilterComponent } from './output/filter/filter.component';
     ChildComponent,
     OutputComponent,
     OutputChild,
-    FilterComponent
+    FilterComponent,
+    NonrelatedComponent,
+    ChildnamesComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
