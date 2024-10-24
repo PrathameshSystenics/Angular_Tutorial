@@ -28,6 +28,7 @@ import { RefvarcomponentComponent } from './refvarcomponent/refvarcomponent.comp
 import { ChildcomponentComponent } from './refvarcomponent/childcomponent/childcomponent.component';
 import { ChilddetailComponent } from './refvarcomponent/childdetail/childdetail.component';
 import { ViewchildComponent } from './viewchild/viewchild.component';
+import { ViewChildrenCompComponent } from './view-children-comp/view-children-comp.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ViewchildComponent } from './viewchild/viewchild.component';
     RefvarcomponentComponent,
     ChildcomponentComponent,
     ChilddetailComponent,
-    ViewchildComponent
+    ViewchildComponent,
+    ViewChildrenCompComponent
   ],
   imports: [
     BrowserModule,
