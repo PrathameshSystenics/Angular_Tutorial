@@ -17,4 +17,8 @@ export class ChilddetailComponent {
   ngOnInit() {
     this.people = this.selectedComp.selectedPeople
   }
+
+  reset() {
+    this.selectedComp.selectedPeople = null as any;
+  }
 }
