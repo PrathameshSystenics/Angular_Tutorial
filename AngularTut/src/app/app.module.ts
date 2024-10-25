@@ -33,6 +33,8 @@ import { NgtemplatecompComponent } from './ngtemplatecomp/ngtemplatecomp.compone
 import { NgcontainercompComponent } from './ngcontainercomp/ngcontainercomp.component';
 import { NgcontentcompComponent } from './ngcontentcomp/ngcontentcomp.component';
 import { ChildcontentComponent } from './ngcontentcomp/childcontent/childcontent.component';
+import { ContentchildcompComponent } from './contentchildcomp/contentchildcomp.component';
+import { ChildtutorialComponent } from './contentchildcomp/childtutorial/childtutorial.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import { ChildcontentComponent } from './ngcontentcomp/childcontent/childcontent
     NgtemplatecompComponent,
     NgcontainercompComponent,
     NgcontentcompComponent,
-    ChildcontentComponent
+    ChildcontentComponent,
+    ContentchildcompComponent,
+    ChildtutorialComponent
   ],
   imports: [
     BrowserModule,
