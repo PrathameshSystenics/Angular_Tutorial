@@ -35,6 +35,8 @@ import { NgcontentcompComponent } from './ngcontentcomp/ngcontentcomp.component'
 import { ChildcontentComponent } from './ngcontentcomp/childcontent/childcontent.component';
 import { ContentchildcompComponent } from './contentchildcomp/contentchildcomp.component';
 import { ChildtutorialComponent } from './contentchildcomp/childtutorial/childtutorial.component';
+import { ContentchildrenComponent } from './contentchildren/contentchildren.component';
+import { ChildchildrenComponent } from './contentchildren/childchildren/childchildren.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +71,9 @@ import { ChildtutorialComponent } from './contentchildcomp/childtutorial/childtu
     NgcontentcompComponent,
     ChildcontentComponent,
     ContentchildcompComponent,
-    ChildtutorialComponent
+    ChildtutorialComponent,
+    ContentchildrenComponent,
+    ChildchildrenComponent
   ],
   imports: [
     BrowserModule,
