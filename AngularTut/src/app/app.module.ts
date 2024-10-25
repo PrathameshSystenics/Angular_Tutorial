@@ -41,6 +41,8 @@ import { NgonchangesComponent } from './lifecyclehooks/ngonchanges/ngonchanges.c
 import { MessagecomponentComponent } from './lifecyclehooks/ngonchanges/messagecomponent/messagecomponent.component';
 import { NgaftercontentinitComponent } from './lifecyclehooks/ngaftercontentinit/ngaftercontentinit.component';
 import { ChildcontentComponent as ChildContentNg } from './lifecyclehooks/ngaftercontentinit/childcontent/childcontent.component';
+import { NgondestoryComponent } from './lifecyclehooks/ngondestory/ngondestory.component';
+import { ChilddestroyComponent } from './lifecyclehooks/ngondestory/childdestroy/childdestroy.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +84,9 @@ import { ChildcontentComponent as ChildContentNg } from './lifecyclehooks/ngafte
     NgonchangesComponent,
     MessagecomponentComponent,
     NgaftercontentinitComponent,
-    ChildContentNg
+    ChildContentNg,
+    NgondestoryComponent,
+    ChilddestroyComponent
   ],
   imports: [
     BrowserModule,
