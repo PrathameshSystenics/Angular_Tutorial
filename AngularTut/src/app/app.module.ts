@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Header/header.component';
@@ -40,6 +39,8 @@ import { ChildchildrenComponent } from './contentchildren/childchildren/childchi
 import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 import { NgonchangesComponent } from './lifecyclehooks/ngonchanges/ngonchanges.component';
 import { MessagecomponentComponent } from './lifecyclehooks/ngonchanges/messagecomponent/messagecomponent.component';
+import { NgaftercontentinitComponent } from './lifecyclehooks/ngaftercontentinit/ngaftercontentinit.component';
+import { ChildcontentComponent as ChildContentNg } from './lifecyclehooks/ngaftercontentinit/childcontent/childcontent.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,8 @@ import { MessagecomponentComponent } from './lifecyclehooks/ngonchanges/messagec
     LifecyclehooksComponent,
     NgonchangesComponent,
     MessagecomponentComponent,
+    NgaftercontentinitComponent,
+    ChildContentNg
   ],
   imports: [
     BrowserModule,
