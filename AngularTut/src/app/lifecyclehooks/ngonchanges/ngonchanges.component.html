@@ -1,0 +1,11 @@
+<div class="border">
+  <div class="input-group">
+    <input type="text" class="form-control" #inputele placeholder="Enter the Text">
+    <button class="btn btn-info" (click)="onBtnClick(inputele)">
+      Submit
+    </button>
+  </div>
+  <messagecomponent [message]="message">
+
+  </messagecomponent>
+</div>

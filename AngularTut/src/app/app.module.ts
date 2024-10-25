@@ -37,6 +37,9 @@ import { ContentchildcompComponent } from './contentchildcomp/contentchildcomp.c
 import { ChildtutorialComponent } from './contentchildcomp/childtutorial/childtutorial.component';
 import { ContentchildrenComponent } from './contentchildren/contentchildren.component';
 import { ChildchildrenComponent } from './contentchildren/childchildren/childchildren.component';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
+import { NgonchangesComponent } from './lifecyclehooks/ngonchanges/ngonchanges.component';
+import { MessagecomponentComponent } from './lifecyclehooks/ngonchanges/messagecomponent/messagecomponent.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +76,10 @@ import { ChildchildrenComponent } from './contentchildren/childchildren/childchi
     ContentchildcompComponent,
     ChildtutorialComponent,
     ContentchildrenComponent,
-    ChildchildrenComponent
+    ChildchildrenComponent,
+    LifecyclehooksComponent,
+    NgonchangesComponent,
+    MessagecomponentComponent,
   ],
   imports: [
     BrowserModule,
