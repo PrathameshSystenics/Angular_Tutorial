@@ -1,10 +1,10 @@
-import { AfterContentChecked, AfterContentInit, AfterViewInit, Component, ContentChild, ElementRef, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'ng-childcontent',
   templateUrl: './childcontent.component.html',
 })
-export class ChildcontentComponent implements AfterContentInit, AfterContentChecked, AfterViewInit {
+export class ChildcontentComponent implements AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
 
   @ContentChild("divcontainer")
   Container: ElementRef = undefined as any;
@@ -33,6 +33,13 @@ export class ChildcontentComponent implements AfterContentInit, AfterContentChec
   // these hook is called one time when all the views and its child views are properly initialized in these you can get the initialized @viewchild property.
   ngAfterViewInit(): void {
     console.log("NgAfterViewInit Hook is called")
+    console.log(this.childdivContainer.nativeElement)
+    console.log(this.Container.nativeElement)
+  }
+
+  // Runs on every change detection cycle.
+  ngAfterViewChecked(): void {
+    console.log("AfterViewchecked Hoook Called");
     console.log(this.childdivContainer.nativeElement)
     console.log(this.Container.nativeElement)
   }
