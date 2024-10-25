@@ -9,5 +9,12 @@
     <div #divcontainer>
       these is container inside the Child component passed form parent calling.
     </div>
+    <div>
+      The Content of the Projected Component {{message}}
+    </div>
   </ng-childcontent>
+
+  <button class="btn btn-danger" (click)="onBtnClick()">
+    Click Me to see magic
+  </button>
 </div>

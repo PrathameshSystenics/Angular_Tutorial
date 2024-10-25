@@ -5,5 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './ngaftercontentinit.component.html',
 })
 export class NgaftercontentinitComponent {
+  message: string = ""
 
+  onBtnClick() {
+    this.message = "Random"
+  }
 }
