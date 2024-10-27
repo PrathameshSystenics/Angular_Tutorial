@@ -27,7 +27,7 @@ export class ChildcontentComponent implements AfterContentInit, AfterContentChec
   // ngAfterContentChecked will called after the ngAfterContentInit Hook and it calls every time whenever the content inside the projected components change
   ngAfterContentChecked(): void {
     console.log("AfterContent Checked Hook called");
-
+    console.log("ContentChild in ngAfterContentChecked => ", this.Container.nativeElement);
   }
 
   // these hook is called one time when all the views and its child views are properly initialized in these you can get the initialized @viewchild property.
