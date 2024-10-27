@@ -47,6 +47,7 @@ import { CustomdirectiveDirective } from './customdirective.directive';
 import { CustomdirectiveComponent } from './customdirective/customdirective.component';
 import { HostlistenerDirective } from './customdirective/hostlistener.directive';
 import { HostbindingDirective } from './customdirective/hostbinding.directive';
+import { PropertybindingDirective } from './customdirective/propertybinding.directive';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,8 @@ import { HostbindingDirective } from './customdirective/hostbinding.directive';
     CustomdirectiveDirective,
     CustomdirectiveComponent,
     HostlistenerDirective,
-    HostbindingDirective
+    HostbindingDirective,
+    PropertybindingDirective
   ],
   imports: [
     BrowserModule,

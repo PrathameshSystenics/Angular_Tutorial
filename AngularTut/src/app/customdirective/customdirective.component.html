@@ -20,3 +20,12 @@
 </p>
 
 <div hostbinding>Host Binding Decorator</div>
+
+<p>
+  Property Binding in Directive just like how we passed the data from the
+  component to child component using &commat;Input decorator similarly can be
+  achieved in Directive.
+</p>
+<!-- passing the value from the directive here we assigned the value to the properties rather than directly to directive -->
+<div [Propertybinding]="{ bgColor: 'yellow', textcolor: 'red' }">Element 1</div>
+<div [Propertybinding]="{ bgColor: 'pink' }">Element 2</div>
