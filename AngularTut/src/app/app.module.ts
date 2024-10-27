@@ -46,6 +46,7 @@ import { ChilddestroyComponent } from './lifecyclehooks/ngondestory/childdestroy
 import { CustomdirectiveDirective } from './customdirective.directive';
 import { CustomdirectiveComponent } from './customdirective/customdirective.component';
 import { HostlistenerDirective } from './customdirective/hostlistener.directive';
+import { HostbindingDirective } from './customdirective/hostbinding.directive';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,8 @@ import { HostlistenerDirective } from './customdirective/hostlistener.directive'
     ChilddestroyComponent,
     CustomdirectiveDirective,
     CustomdirectiveComponent,
-    HostlistenerDirective
+    HostlistenerDirective,
+    HostbindingDirective
   ],
   imports: [
     BrowserModule,
