@@ -43,6 +43,8 @@ import { NgaftercontentinitComponent } from './lifecyclehooks/ngaftercontentinit
 import { ChildcontentComponent as ChildContentNg } from './lifecyclehooks/ngaftercontentinit/childcontent/childcontent.component';
 import { NgondestoryComponent } from './lifecyclehooks/ngondestory/ngondestory.component';
 import { ChilddestroyComponent } from './lifecyclehooks/ngondestory/childdestroy/childdestroy.component';
+import { CustomdirectiveDirective } from './customdirective.directive';
+import { CustomdirectiveComponent } from './customdirective/customdirective.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +88,9 @@ import { ChilddestroyComponent } from './lifecyclehooks/ngondestory/childdestroy
     NgaftercontentinitComponent,
     ChildContentNg,
     NgondestoryComponent,
-    ChilddestroyComponent
+    ChilddestroyComponent,
+    CustomdirectiveDirective,
+    CustomdirectiveComponent
   ],
   imports: [
     BrowserModule,
