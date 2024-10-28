@@ -48,6 +48,7 @@ import { CustomdirectiveComponent } from './customdirective/customdirective.comp
 import { HostlistenerDirective } from './customdirective/hostlistener.directive';
 import { HostbindingDirective } from './customdirective/hostbinding.directive';
 import { PropertybindingDirective } from './customdirective/propertybinding.directive';
+import { ConditionalattrDirective } from './customdirective/conditionalattr.directive';
 
 @NgModule({
   declarations: [
@@ -96,7 +97,8 @@ import { PropertybindingDirective } from './customdirective/propertybinding.dire
     CustomdirectiveComponent,
     HostlistenerDirective,
     HostbindingDirective,
-    PropertybindingDirective
+    PropertybindingDirective,
+    ConditionalattrDirective
   ],
   imports: [
     BrowserModule,

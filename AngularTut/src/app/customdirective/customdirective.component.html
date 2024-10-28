@@ -29,3 +29,12 @@
 <!-- passing the value from the directive here we assigned the value to the properties rather than directly to directive -->
 <div [Propertybinding]="{ bgColor: 'yellow', textcolor: 'red' }">Element 1</div>
 <div [Propertybinding]="{ bgColor: 'pink' }">Element 2</div>
+
+<p>
+  Conditional attribute directive to render something based on condition or
+  expression.
+</p>
+<div [conditionalattr]="toRender" class="mt-2">These is going to Render</div>
+<div [conditionalattr]="!toRender" class="mt-2">
+  These is Going to render with True Condition
+</div>
