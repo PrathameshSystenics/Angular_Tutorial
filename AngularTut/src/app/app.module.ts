@@ -50,6 +50,7 @@ import { HostbindingDirective } from './customdirective/hostbinding.directive';
 import { PropertybindingDirective } from './customdirective/propertybinding.directive';
 import { ConditionalattrDirective } from './customdirective/conditionalattr.directive';
 import { StructuralDirective } from './customdirective/structural.directive';
+import { NgswtichComponent } from './ngswtich/ngswtich.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +101,8 @@ import { StructuralDirective } from './customdirective/structural.directive';
     HostbindingDirective,
     PropertybindingDirective,
     ConditionalattrDirective,
-    StructuralDirective
+    StructuralDirective,
+    NgswtichComponent
   ],
   imports: [
     BrowserModule,
