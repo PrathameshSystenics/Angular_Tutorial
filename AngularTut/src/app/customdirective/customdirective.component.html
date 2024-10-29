@@ -38,3 +38,13 @@
 <div [conditionalattr]="!toRender" class="mt-2">
   These is Going to render with True Condition
 </div>
+
+<p>
+  Creating Custom Show after delay structural directive
+</p>
+<div *structural="toRender">
+  these is the structural directive content
+</div>
+<button class="btn btn-light" (click)="toRender=!toRender">
+  Click Here to see the Hidden Content
+</button>
