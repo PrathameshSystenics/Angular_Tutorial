@@ -56,6 +56,8 @@ import { Child1Component } from './viewencapsulation/child1/child1.component';
 import { ServiceComponent } from './service/service.component';
 import { ServiceSiblingComponent } from './service/service-sibling/service-sibling.component';
 import { DependencyinjectionComponent } from './dependencyinjection/dependencyinjection.component';
+import { ServiceChildComponent } from './service/service-child/service-child.component';
+import { SubscribeService } from './Services/subscribe.service';
 
 @NgModule({
   declarations: [
@@ -112,14 +114,17 @@ import { DependencyinjectionComponent } from './dependencyinjection/dependencyin
     Child1Component,
     ServiceComponent,
     ServiceSiblingComponent,
-    DependencyinjectionComponent
+    DependencyinjectionComponent,
+    ServiceChildComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule // Defining any import are there in the project
   ],
-  providers: [],
+  providers: [
+    SubscribeService  // defining the service in the module level.
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
