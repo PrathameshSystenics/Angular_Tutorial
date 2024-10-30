@@ -57,6 +57,7 @@ import { ServiceComponent } from './service/service.component';
 import { ServiceSiblingComponent } from './service/service-sibling/service-sibling.component';
 import { ServiceChildComponent } from './service/service-child/service-child.component';
 import { SubscribeService } from './Services/subscribe.service';
+import { LogService } from './Services/log-service.service';
 
 @NgModule({
   declarations: [
@@ -113,16 +114,17 @@ import { SubscribeService } from './Services/subscribe.service';
     Child1Component,
     ServiceComponent,
     ServiceSiblingComponent,
-    ServiceChildComponent
+    ServiceChildComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule // Defining any import are there in the project
+    FormsModule, // Defining any import are there in the project
   ],
   providers: [
-    SubscribeService  // defining the service in the module level.
+    SubscribeService, // defining the service in the module level.
+    LogService,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
