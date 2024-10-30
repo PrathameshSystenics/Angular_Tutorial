@@ -53,6 +53,9 @@ import { StructuralDirective } from './customdirective/structural.directive';
 import { NgswtichComponent } from './ngswtich/ngswtich.component';
 import { ViewencapsulationComponent } from './viewencapsulation/viewencapsulation.component';
 import { Child1Component } from './viewencapsulation/child1/child1.component';
+import { ServiceComponent } from './service/service.component';
+import { ServiceSiblingComponent } from './service/service-sibling/service-sibling.component';
+import { DependencyinjectionComponent } from './dependencyinjection/dependencyinjection.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +109,10 @@ import { Child1Component } from './viewencapsulation/child1/child1.component';
     StructuralDirective,
     NgswtichComponent,
     ViewencapsulationComponent,
-    Child1Component
+    Child1Component,
+    ServiceComponent,
+    ServiceSiblingComponent,
+    DependencyinjectionComponent
   ],
   imports: [
     BrowserModule,
