@@ -51,6 +51,8 @@ import { PropertybindingDirective } from './customdirective/propertybinding.dire
 import { ConditionalattrDirective } from './customdirective/conditionalattr.directive';
 import { StructuralDirective } from './customdirective/structural.directive';
 import { NgswtichComponent } from './ngswtich/ngswtich.component';
+import { ViewencapsulationComponent } from './viewencapsulation/viewencapsulation.component';
+import { Child1Component } from './viewencapsulation/child1/child1.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +104,9 @@ import { NgswtichComponent } from './ngswtich/ngswtich.component';
     PropertybindingDirective,
     ConditionalattrDirective,
     StructuralDirective,
-    NgswtichComponent
+    NgswtichComponent,
+    ViewencapsulationComponent,
+    Child1Component
   ],
   imports: [
     BrowserModule,
