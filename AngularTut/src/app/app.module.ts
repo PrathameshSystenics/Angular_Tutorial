@@ -59,6 +59,8 @@ import { ServiceChildComponent } from './service/service-child/service-child.com
 import { SubscribeService } from './Services/subscribe.service';
 import { LogService } from './Services/log-service.service';
 import { InjectiontokenComponent } from './injectiontoken/injectiontoken.component';
+import { ComponentserviceComponent } from './componentservice/componentservice.component';
+import { ProductDetailComponent } from './componentservice/product-detail/product-detail.component';
 
 // Creating the injection Token with the string
 export const API_URL = new InjectionToken<string>('API_URL');
@@ -120,6 +122,8 @@ export const API_URL = new InjectionToken<string>('API_URL');
     ServiceSiblingComponent,
     ServiceChildComponent,
     InjectiontokenComponent,
+    ComponentserviceComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
