@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { InjectionToken, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -58,6 +58,10 @@ import { ServiceSiblingComponent } from './service/service-sibling/service-sibli
 import { ServiceChildComponent } from './service/service-child/service-child.component';
 import { SubscribeService } from './Services/subscribe.service';
 import { LogService } from './Services/log-service.service';
+import { InjectiontokenComponent } from './injectiontoken/injectiontoken.component';
+
+// Creating the injection Token with the string
+export const API_URL = new InjectionToken<string>('API_URL');
 
 @NgModule({
   declarations: [
@@ -115,6 +119,7 @@ import { LogService } from './Services/log-service.service';
     ServiceComponent,
     ServiceSiblingComponent,
     ServiceChildComponent,
+    InjectiontokenComponent,
   ],
   imports: [
     BrowserModule,
@@ -124,6 +129,7 @@ import { LogService } from './Services/log-service.service';
   providers: [
     SubscribeService, // defining the service in the module level.
     LogService,
+    { provide: API_URL, useValue: 'https://dummyjson.com/comments' }, // at the end angular converts these into the object.
   ],
   bootstrap: [AppComponent],
 })
