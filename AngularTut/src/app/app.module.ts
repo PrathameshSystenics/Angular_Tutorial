@@ -61,6 +61,16 @@ import { LogService } from './Services/log-service.service';
 import { InjectiontokenComponent } from './injectiontoken/injectiontoken.component';
 import { ComponentserviceComponent } from './componentservice/componentservice.component';
 import { ProductDetailComponent } from './componentservice/product-detail/product-detail.component';
+import { HomeComponent } from './Pages/homecomponent/homecomponent.component';
+import { GetstartedComponent } from './getstarted/getstarted.component';
+import { StartedComponent } from './Pages/started/started.component';
+import { DirectiveComponent } from './Pages/directive/directive.component';
+import { BindingComponent } from './Pages/binding/binding.component';
+import { ReferenceVarComponent } from './Pages/reference-var/reference-var.component';
+import { DecoratortemplateComponent } from './Pages/decoratortemplate/decoratortemplate.component';
+import { HooksComponent } from './Pages/hooks/hooks.component';
+import { ConceptsComponent } from './Pages/concepts/concepts.component';
+import { ServicesdependencyComponent } from './Pages/servicesdependency/servicesdependency.component';
 
 // Creating the injection Token with the string
 export const API_URL = new InjectionToken<string>('API_URL');
@@ -124,6 +134,16 @@ export const API_URL = new InjectionToken<string>('API_URL');
     InjectiontokenComponent,
     ComponentserviceComponent,
     ProductDetailComponent,
+    HomeComponent,
+    GetstartedComponent,
+    StartedComponent,
+    DirectiveComponent,
+    BindingComponent,
+    ReferenceVarComponent,
+    DecoratortemplateComponent,
+    HooksComponent,
+    ConceptsComponent,
+    ServicesdependencyComponent,
   ],
   imports: [
     BrowserModule,

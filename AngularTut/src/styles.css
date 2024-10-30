@@ -7,3 +7,7 @@ body {
 .btn-angular{
   background-color: red;
 }
+
+.fullpage{
+  height: 80vh;
+}
