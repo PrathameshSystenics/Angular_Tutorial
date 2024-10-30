@@ -2,10 +2,10 @@
   These is Service Child Component
 </p>
 
-<div *ngIf="!usernname else logtemplate" class="border border-1 border-black text-center p-2">
+<div *ngIf="!this.service.loginusername else logtemplate" class="border border-1 border-black text-center p-2">
   User Not Logged In
 </div>
 
 <ng-template #logtemplate>
-  User : {{usernname}}
+  User : {{this.service.loginusername}}
 </ng-template>
