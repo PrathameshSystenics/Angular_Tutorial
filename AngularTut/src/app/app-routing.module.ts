@@ -12,6 +12,7 @@ import { ServicesdependencyComponent } from './Pages/servicesdependency/services
 import { NotfoundComponent } from './Pages/notfound/notfound.component';
 import { RouterTutComponent } from './Pages/router-tut/router-tut.component';
 import { RouteParamComponent } from './route-param/route-param.component';
+import { QueryStringComponent } from './query-string/query-string.component';
 
 // Defining the routes
 const routes: Routes = [
@@ -30,6 +31,8 @@ const routes: Routes = [
 
   // defining the route parameter with the route
   { path: 'routeparam/:index', component: RouteParamComponent },
+
+  {path:"querystring",component:QueryStringComponent},
   { path: '**', component: NotfoundComponent },
 ];
 
