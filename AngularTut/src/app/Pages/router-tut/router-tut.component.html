@@ -1,0 +1,17 @@
+<div class="container">
+
+  <h3>
+    Routing by Navigate Method & NavigateByUrl using Programatically
+  </h3>
+  <button class="btn btn-danger me-3" (click)="onBtnNavigate()">
+    Navigate to Binding by Navigate Method
+  </button>
+  <button class="btn btn-info" (click)="onBtnNavigateByUrl()">
+    Navigate to Directive by NavigateByUrl Method
+  </button>
+  <div>
+    the Currently Active Route => {{activatedRoute.snapshot.url}}
+  </div>
+  <hr />
+
+</div>

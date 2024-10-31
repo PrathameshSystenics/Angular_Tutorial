@@ -10,6 +10,7 @@ import { HooksComponent } from './Pages/hooks/hooks.component';
 import { ConceptsComponent } from './Pages/concepts/concepts.component';
 import { ServicesdependencyComponent } from './Pages/servicesdependency/servicesdependency.component';
 import { NotfoundComponent } from './Pages/notfound/notfound.component';
+import { RouterTutComponent } from './Pages/router-tut/router-tut.component';
 
 // Defining the routes
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'hooks', component: HooksComponent },
   { path: 'concepts', component: ConceptsComponent },
   { path: 'services-dependency', component: ServicesdependencyComponent },
+  { path: 'routes', component: RouterTutComponent },
   { path: '**', component: NotfoundComponent },
 ];
 

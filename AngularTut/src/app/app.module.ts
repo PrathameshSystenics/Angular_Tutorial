@@ -72,6 +72,8 @@ import { HooksComponent } from './Pages/hooks/hooks.component';
 import { ConceptsComponent } from './Pages/concepts/concepts.component';
 import { ServicesdependencyComponent } from './Pages/servicesdependency/servicesdependency.component';
 import { NotfoundComponent } from './Pages/notfound/notfound.component';
+import { RouterTutComponent } from './Pages/router-tut/router-tut.component';
+import { RouteParamComponent } from './route-param/route-param.component';
 
 // Creating the injection Token with the string
 export const API_URL = new InjectionToken<string>('API_URL');
@@ -146,6 +148,8 @@ export const API_URL = new InjectionToken<string>('API_URL');
     ConceptsComponent,
     ServicesdependencyComponent,
     NotfoundComponent,
+    RouterTutComponent,
+    RouteParamComponent,
   ],
   imports: [
     BrowserModule,
