@@ -36,7 +36,7 @@ export class QueryStringComponent implements OnInit {
       }
 
       if (this.storage !== 'null' && this.storage !== '') {
-        this.listoflaptops = this.laptopService.Laptops.filter(
+        this.listoflaptops = this.listoflaptops.filter(
           (value) => value.storageType === this.storage
         );
       }
@@ -45,13 +45,13 @@ export class QueryStringComponent implements OnInit {
 
   OnChangeSelect(storageEle: HTMLSelectElement, brandEle: HTMLSelectElement) {
     // assigning the query parameters programatically
-    this.route.navigate(['querystring'], {
+    this.route.navigate(['routes', 'querystring'], {
       queryParams: { storage: storageEle.value, brand: brandEle.value },
     });
   }
 
   OnClearFilters() {
-    this.route.navigate(['querystring']);
+    this.route.navigate(['routes', 'querystring']);
     this.listoflaptops = this.laptopService.Laptops;
   }
 }

@@ -28,13 +28,23 @@ const routes: Routes = [
   { path: 'hooks', component: HooksComponent },
   { path: 'concepts', component: ConceptsComponent },
   { path: 'services-dependency', component: ServicesdependencyComponent },
-  { path: 'routes', component: RouterTutComponent },
+  {
+    path: 'routes',
+    // defining the children routes of the route path
+    children: [
+      {
+        path: '',
+        component: RouterTutComponent,
+      },
+      {
+        path: 'routeparam/:index',
+        component: RouteParamComponent,
+      },
+      { path: 'querystring', component: QueryStringComponent },
+      { path: 'fragments', component: FragmentComponent },
+    ],
+  },
 
-  // defining the route parameter with the route
-  { path: 'routeparam/:index', component: RouteParamComponent },
-
-  { path: 'querystring', component: QueryStringComponent },
-  { path: 'fragments', component: FragmentComponent },
   { path: '**', component: NotfoundComponent },
 ];
 

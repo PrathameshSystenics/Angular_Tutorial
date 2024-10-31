@@ -32,6 +32,6 @@ export class RouterTutComponent implements OnInit {
   }
 
   onSelectChange(selectEl: HTMLSelectElement) {
-    this.route.navigate(['routeparam', selectEl.value]);
+    this.route.navigate(['routes', 'routeparam', selectEl.value]);
   }
 }
