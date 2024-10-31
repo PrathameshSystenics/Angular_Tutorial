@@ -16,4 +16,9 @@ export class LaptopService {
   OnShowSelectedLaptop(laptop: Laptop) {
     this.OnLaptopClick.emit(laptop);
   }
+
+  // get laptop by its index
+  public laptopByIndex(idx: number): Laptop {
+    return this.Laptops[idx];
+  }
 }
