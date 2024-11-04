@@ -76,6 +76,9 @@ import { RouterTutComponent } from './Pages/router-tut/router-tut.component';
 import { RouteParamComponent } from './route-param/route-param.component';
 import { QueryStringComponent } from './query-string/query-string.component';
 import { FragmentComponent } from './fragment/fragment.component';
+import { RouteguardComponent } from './Pages/routeguard/routeguard.component';
+import { LoginComponent } from './login/login.component';
+import { ProtectedRoutesComponent } from './Pages/protected-routes/protected-routes.component';
 
 // Creating the injection Token with the string
 export const API_URL = new InjectionToken<string>('API_URL');
@@ -154,6 +157,9 @@ export const API_URL = new InjectionToken<string>('API_URL');
     RouteParamComponent,
     QueryStringComponent,
     FragmentComponent,
+    RouteguardComponent,
+    LoginComponent,
+    ProtectedRoutesComponent,
   ],
   imports: [
     BrowserModule,

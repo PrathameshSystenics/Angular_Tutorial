@@ -1,0 +1,26 @@
+<div>
+  <p>
+    Login Service
+  </p>
+  <div *ngIf="!authservice.isLoggedIn else logtemp">
+
+    <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" #usernamebox>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" #passwordbox>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="onsubmit($event)">Submit</button>
+    </form>
+
+  </div>
+  <ng-template #logtemp>
+    You are LoggedIn User
+    <button class="btn btn-outline-danger" (click)="this.authservice.logout()">
+      LogOut
+    </button>
+  </ng-template>
+</div>

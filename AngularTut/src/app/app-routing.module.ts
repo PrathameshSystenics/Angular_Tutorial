@@ -14,6 +14,10 @@ import { RouterTutComponent } from './Pages/router-tut/router-tut.component';
 import { RouteParamComponent } from './route-param/route-param.component';
 import { QueryStringComponent } from './query-string/query-string.component';
 import { FragmentComponent } from './fragment/fragment.component';
+import { RouteguardComponent } from './Pages/routeguard/routeguard.component';
+import { ProtectedRoutesComponent } from './Pages/protected-routes/protected-routes.component';
+// importing the function of inactivate
+import { CanActivate } from './Services/auth.guard';
 
 // Defining the routes
 const routes: Routes = [
@@ -44,7 +48,14 @@ const routes: Routes = [
       { path: 'fragments', component: FragmentComponent },
     ],
   },
-
+  { path: 'guard', component: RouteguardComponent },
+  // defining the canactivate route guard in the routes only
+  {
+    path: 'protected',
+    component: ProtectedRoutesComponent,
+    // you can define the arrow function over here but these is the best approach to apply the route guard.
+    canActivate: [CanActivate],
+  },
   { path: '**', component: NotfoundComponent },
 ];
 
