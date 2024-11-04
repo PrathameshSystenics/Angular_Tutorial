@@ -82,6 +82,7 @@ import { ProtectedRoutesComponent } from './Pages/protected-routes/protected-rou
 import { Proteroute1Component } from './Pages/protected-routes/proteroute1/proteroute1.component';
 import { Proteroute2Component } from './Pages/protected-routes/proteroute2/proteroute2.component';
 import { CandeactivateformComponent } from './candeactivateform/candeactivateform.component';
+import { ResolveGuardComponent } from './resolve-guard/resolve-guard.component';
 
 // Creating the injection Token with the string
 export const API_URL = new InjectionToken<string>('API_URL');
@@ -166,6 +167,7 @@ export const API_URL = new InjectionToken<string>('API_URL');
     Proteroute1Component,
     Proteroute2Component,
     CandeactivateformComponent,
+    ResolveGuardComponent,
   ],
   imports: [
     BrowserModule,

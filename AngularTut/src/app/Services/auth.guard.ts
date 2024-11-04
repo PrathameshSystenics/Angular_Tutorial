@@ -4,12 +4,14 @@ import {
   RouterStateSnapshot,
   CanActivateChildFn,
   CanDeactivateFn,
+  ResolveFn,
 } from '@angular/router';
 import { AuthService } from './auth.service';
 import { inject } from '@angular/core';
 import { RouteguardComponent } from '../Pages/routeguard/routeguard.component';
 import { LoginComponent } from '../login/login.component';
 import { CandeactivateformComponent } from '../candeactivateform/candeactivateform.component';
+import { data, Products } from '../../data/products';
 
 // implementing the CanActivateFn guard.
 // when it returns true you can able to view the specified component.
@@ -35,4 +37,9 @@ export const CanDeactivateGuard: CanDeactivateFn<CandeactivateformComponent> = (
   nextState: RouterStateSnapshot
 ) => {
   return component.CanExit();
+};
+
+// Implementing the Resolve Route guard
+export const ResolveData: ResolveFn<Products[]> = () => {
+  return data;
 };

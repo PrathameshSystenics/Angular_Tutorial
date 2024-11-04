@@ -21,10 +21,12 @@ import {
   CanActivate,
   CanActivateChild,
   CanDeactivateGuard,
+  ResolveData,
 } from './Services/auth.guard';
 import { Proteroute1Component } from './Pages/protected-routes/proteroute1/proteroute1.component';
 import { Proteroute2Component } from './Pages/protected-routes/proteroute2/proteroute2.component';
 import { CandeactivateformComponent } from './candeactivateform/candeactivateform.component';
+import { ResolveGuardComponent } from './resolve-guard/resolve-guard.component';
 
 // Defining the routes
 const routes: Routes = [
@@ -94,6 +96,13 @@ const routes: Routes = [
     component: CandeactivateformComponent,
     // using the candeactivate route guard in the router
     canDeactivate: [CanDeactivateGuard],
+  },
+  // Implementation of Resolve route guard
+  {
+    path: 'resolve',
+    component: ResolveGuardComponent,
+    // applying the function of resolve to these
+    resolve: { products: ResolveData },
   },
 
   { path: '**', component: NotfoundComponent },
