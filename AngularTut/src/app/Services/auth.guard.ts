@@ -2,6 +2,7 @@ import {
   ActivatedRouteSnapshot,
   CanActivateFn,
   RouterStateSnapshot,
+  CanActivateChildFn,
 } from '@angular/router';
 import { AuthService } from './auth.service';
 import { inject } from '@angular/core';
@@ -11,8 +12,13 @@ import { inject } from '@angular/core';
 export const CanActivate: CanActivateFn = (
   route: ActivatedRouteSnapshot,
   state: RouterStateSnapshot
-):boolean => {
+): boolean => {
   let authService: AuthService = inject(AuthService);
 
   return authService.isLoggedIn;
+};
+
+// implementing the canActivate Child guard
+export const CanActivateChild: CanActivateChildFn = (childroute, state) => {
+  return CanActivate(childroute, state);
 };

@@ -79,6 +79,8 @@ import { FragmentComponent } from './fragment/fragment.component';
 import { RouteguardComponent } from './Pages/routeguard/routeguard.component';
 import { LoginComponent } from './login/login.component';
 import { ProtectedRoutesComponent } from './Pages/protected-routes/protected-routes.component';
+import { Proteroute1Component } from './Pages/protected-routes/proteroute1/proteroute1.component';
+import { Proteroute2Component } from './Pages/protected-routes/proteroute2/proteroute2.component';
 
 // Creating the injection Token with the string
 export const API_URL = new InjectionToken<string>('API_URL');
@@ -160,6 +162,8 @@ export const API_URL = new InjectionToken<string>('API_URL');
     RouteguardComponent,
     LoginComponent,
     ProtectedRoutesComponent,
+    Proteroute1Component,
+    Proteroute2Component,
   ],
   imports: [
     BrowserModule,

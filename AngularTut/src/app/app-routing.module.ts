@@ -17,7 +17,9 @@ import { FragmentComponent } from './fragment/fragment.component';
 import { RouteguardComponent } from './Pages/routeguard/routeguard.component';
 import { ProtectedRoutesComponent } from './Pages/protected-routes/protected-routes.component';
 // importing the function of inactivate
-import { CanActivate } from './Services/auth.guard';
+import { CanActivate, CanActivateChild } from './Services/auth.guard';
+import { Proteroute1Component } from './Pages/protected-routes/proteroute1/proteroute1.component';
+import { Proteroute2Component } from './Pages/protected-routes/proteroute2/proteroute2.component';
 
 // Defining the routes
 const routes: Routes = [
@@ -51,10 +53,31 @@ const routes: Routes = [
   { path: 'guard', component: RouteguardComponent },
   // defining the canactivate route guard in the routes only
   {
-    path: 'protected',
+    path: 'canactivate',
     component: ProtectedRoutesComponent,
     // you can define the arrow function over here but these is the best approach to apply the route guard.
     canActivate: [CanActivate],
+    children: [
+      { path: 'route1', component: Proteroute1Component },
+      {
+        path: 'route2',
+        component: Proteroute2Component,
+      },
+    ],
+  },
+  // these route is for the children routing
+  {
+    path: 'canactivatechild',
+    component: ProtectedRoutesComponent,
+    // specifying the array of canactivate child
+    canActivateChild: [CanActivateChild],
+    children: [
+      { path: 'route1', component: Proteroute1Component },
+      {
+        path: 'route2',
+        component: Proteroute2Component,
+      },
+    ],
   },
   { path: '**', component: NotfoundComponent },
 ];
