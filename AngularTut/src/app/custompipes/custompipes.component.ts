@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-custompipes',
+  selector: 'custompipes',
   templateUrl: './custompipes.component.html',
-  styles: ``
+  styles: ``,
 })
 export class CustompipesComponent {
-
+  email: string = 'prathamesh@gmail.com';
+  phoneno: number = 1234567890;
 }
