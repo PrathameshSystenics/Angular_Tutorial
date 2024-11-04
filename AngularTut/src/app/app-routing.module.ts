@@ -17,9 +17,14 @@ import { FragmentComponent } from './fragment/fragment.component';
 import { RouteguardComponent } from './Pages/routeguard/routeguard.component';
 import { ProtectedRoutesComponent } from './Pages/protected-routes/protected-routes.component';
 // importing the function of inactivate
-import { CanActivate, CanActivateChild } from './Services/auth.guard';
+import {
+  CanActivate,
+  CanActivateChild,
+  CanDeactivateGuard,
+} from './Services/auth.guard';
 import { Proteroute1Component } from './Pages/protected-routes/proteroute1/proteroute1.component';
 import { Proteroute2Component } from './Pages/protected-routes/proteroute2/proteroute2.component';
+import { CandeactivateformComponent } from './candeactivateform/candeactivateform.component';
 
 // Defining the routes
 const routes: Routes = [
@@ -50,7 +55,11 @@ const routes: Routes = [
       { path: 'fragments', component: FragmentComponent },
     ],
   },
-  { path: 'guard', component: RouteguardComponent },
+  // applying the deactivate route guard
+  {
+    path: 'guard',
+    component: RouteguardComponent,
+  },
   // defining the canactivate route guard in the routes only
   {
     path: 'canactivate',
@@ -79,6 +88,14 @@ const routes: Routes = [
       },
     ],
   },
+  // path for deactivate route guard
+  {
+    path: 'deactivate',
+    component: CandeactivateformComponent,
+    // using the candeactivate route guard in the router
+    canDeactivate: [CanDeactivateGuard],
+  },
+
   { path: '**', component: NotfoundComponent },
 ];
 

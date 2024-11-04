@@ -3,7 +3,6 @@ import {
   ElementRef,
   inject,
   ViewChild,
-  viewChild,
 } from '@angular/core';
 import { AuthService } from '../Services/auth.service';
 
