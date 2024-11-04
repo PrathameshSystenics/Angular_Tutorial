@@ -9,9 +9,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ResolveGuardComponent implements OnInit {
   productItems: Products[] = [];
   activatedRoute: ActivatedRoute = inject(ActivatedRoute);
+  totalProducts: number = 0;
 
-  // getting the data from the resolve property
+  
   ngOnInit(): void {
+    // getting the static data which we have declared in routes
+    this.totalProducts = this.activatedRoute.snapshot.data['totalProducts'];
+
+    // getting the data from the resolve property
     this.productItems = this.activatedRoute.snapshot.data['products'];
   }
 }

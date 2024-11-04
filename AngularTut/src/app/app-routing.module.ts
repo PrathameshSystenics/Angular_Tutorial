@@ -27,6 +27,7 @@ import { Proteroute1Component } from './Pages/protected-routes/proteroute1/prote
 import { Proteroute2Component } from './Pages/protected-routes/proteroute2/proteroute2.component';
 import { CandeactivateformComponent } from './candeactivateform/candeactivateform.component';
 import { ResolveGuardComponent } from './resolve-guard/resolve-guard.component';
+import { data } from '../data/products';
 
 // Defining the routes
 const routes: Routes = [
@@ -103,6 +104,8 @@ const routes: Routes = [
     component: ResolveGuardComponent,
     // applying the function of resolve to these
     resolve: { products: ResolveData },
+    // passing the static data from the route to the component
+    data: { totalProducts: data.length },
   },
 
   { path: '**', component: NotfoundComponent },
