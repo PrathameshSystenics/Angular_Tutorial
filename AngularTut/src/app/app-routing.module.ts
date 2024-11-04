@@ -28,6 +28,7 @@ import { Proteroute2Component } from './Pages/protected-routes/proteroute2/prote
 import { CandeactivateformComponent } from './candeactivateform/candeactivateform.component';
 import { ResolveGuardComponent } from './resolve-guard/resolve-guard.component';
 import { data } from '../data/products';
+import { PipesComponent } from './Pages/pipes/pipes.component';
 
 // Defining the routes
 const routes: Routes = [
@@ -107,7 +108,7 @@ const routes: Routes = [
     // passing the static data from the route to the component
     data: { totalProducts: data.length },
   },
-
+  { path: 'pipes', component: PipesComponent },
   { path: '**', component: NotfoundComponent },
 ];
 
