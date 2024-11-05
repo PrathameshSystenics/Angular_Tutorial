@@ -29,6 +29,8 @@ import { CandeactivateformComponent } from './candeactivateform/candeactivatefor
 import { ResolveGuardComponent } from './resolve-guard/resolve-guard.component';
 import { data } from '../data/products';
 import { PipesComponent } from './Pages/pipes/pipes.component';
+import { FormsComponent } from './Pages/forms/forms.component';
+import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 
 // Defining the routes
 const routes: Routes = [
@@ -109,6 +111,13 @@ const routes: Routes = [
     data: { totalProducts: data.length },
   },
   { path: 'pipes', component: PipesComponent },
+  {
+    path: 'forms',
+    children: [
+      { path: '', component: FormsComponent },
+      { path: 'template-driven', component: TemplatedrivenComponent },
+    ],
+  },
   { path: '**', component: NotfoundComponent },
 ];
 

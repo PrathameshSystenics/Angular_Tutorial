@@ -87,6 +87,8 @@ import { PipesComponent } from './Pages/pipes/pipes.component';
 import { InbuiltpipesComponent } from './inbuiltpipes/inbuiltpipes.component';
 import { CustompipesComponent } from './custompipes/custompipes.component';
 import { MasksensitivePipe } from './custompipes/masksensitive.pipe';
+import { FormsComponent } from './Pages/forms/forms.component';
+import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 
 // Creating the injection Token with the string
 export const API_URL = new InjectionToken<string>('API_URL');
@@ -176,6 +178,8 @@ export const API_URL = new InjectionToken<string>('API_URL');
     InbuiltpipesComponent,
     CustompipesComponent,
     MasksensitivePipe,
+    FormsComponent,
+    TemplatedrivenComponent,
   ],
   imports: [
     BrowserModule,
