@@ -307,6 +307,22 @@
         Age must be between 18 - 50
       </div>
     </div>
+
+    <!-- Rendering the formRecord forms -->
+    <div class="mb-3" formGroupName="records">
+      <input
+        type="number"
+        formControlName="year"
+        class="form-control"
+        placeholder="Enter Year"
+      />
+      <input
+        type="number"
+        formControlName="month"
+        class="form-control"
+        placeholder="Enter Month"
+      />
+    </div>
     <button
       class="btn btn-primary mt-2"
       type="submit"

@@ -1,12 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  EmailValidator,
   FormArray,
   FormControl,
   FormGroup,
+  FormRecord,
   Validators,
 } from '@angular/forms';
 import { CheckPasswordStrength, Range } from './custom.validator';
+
+// creating the typed forms 
+interface IRegisterForm {
+  firstname: FormControl<string>,
+  lastname: FormControl<string>,
+  email: FormControl<string>,
+  gender: FormControl<string>,
+  address: FormGroup,
+  dob: FormControl<string>,
+  formarray: FormArray<FormControl<string>>,
+  hobbies: FormArray<FormControl<string>>,
+  studies: FormArray<FormGroup>,
+  password: FormControl<string>,
+  age: FormControl<number>,
+  records: FormRecord<FormControl<string | number | any>>
+}
+
 
 @Component({
   selector: 'reactiveform',
@@ -20,7 +37,7 @@ export class ReactiveformComponent implements OnInit {
   ngOnInit(): void {
     // initializing or defining the form value or names in the formgroup
     // using the validators in the form control itself
-    this.reactiveform = new FormGroup({
+    this.reactiveform = new FormGroup<IRegisterForm>({
       firstname: new FormControl(null, Validators.required),
       lastname: new FormControl('', Validators.required),
       // Assigning the email validators
@@ -48,7 +65,12 @@ export class ReactiveformComponent implements OnInit {
         Validators.required,
       ]),
       // using the custom validator with parameters
-      age: new FormControl('', [Validators.required, Range(18, 50)]),
+      age: new FormControl<number>(0, [Validators.required, Range(18, 50)]),
+      // from angular 17 there is new concept called the form record which keeps the controls in the key value pair unlike the array where we need to track.
+      records: new FormRecord<FormControl<string | number | any>>({
+        year: new FormControl<number>(2003),
+        month: new FormControl<number>(4),
+      })
     });
   }
 
