@@ -88,7 +88,7 @@
     <div class="mb-3" ngModelGroup="address">
       <label for="state" class="form-label">State</label>
       <select class="form-select" id="state" required name="state" ngModel>
-        <option value="">Select State</option>
+        <option value="" selected>Select State</option>
         <option value="Andhra Pradesh">Andhra Pradesh</option>
         <option value="Bihar">Bihar</option>
         <option value="Delhi">Delhi</option>
@@ -135,5 +135,21 @@
 
     <!-- Submit Button -->
     <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+
+
+    <!-- Set the Value -->
+     <button class="btn btn-success ms-1" (click)="onSetBtn()">
+      Set the Value using SetValue method
+     </button>
+
+     <!-- Patch only the selected value -->
+      <button class="btn btn-warning ms-1" (click)="onPatchBtn()">
+        PatchValue of Address
+      </button>
+
+      <!-- Resetting the form -->
+       <button class="btn btn-danger ms-1" (click)="resetForm()" >
+        Reset Form
+       </button>
   </form>
 </div>
