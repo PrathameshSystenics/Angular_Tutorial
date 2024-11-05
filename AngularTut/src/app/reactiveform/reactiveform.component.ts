@@ -6,6 +6,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { CheckPasswordStrength, Range } from './custom.validator';
 
 @Component({
   selector: 'reactiveform',
@@ -41,6 +42,13 @@ export class ReactiveformComponent implements OnInit {
       hobbies: new FormArray([new FormControl('', Validators.required)]),
       // for adding the formgroups dynamically
       studies: new FormArray([]),
+      // using the custom validator
+      password: new FormControl('', [
+        CheckPasswordStrength,
+        Validators.required,
+      ]),
+      // using the custom validator with parameters
+      age: new FormControl('', [Validators.required, Range(18, 50)]),
     });
   }
 

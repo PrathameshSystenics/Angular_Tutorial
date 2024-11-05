@@ -189,11 +189,19 @@
           [formControlName]="i"
           [placeholder]="'Hobbies ' + (i + 1)"
         />
-        <button class="btn btn-success" type="button" (click)="DeleteHobbies(i)">
+        <button
+          class="btn btn-success"
+          type="button"
+          (click)="DeleteHobbies(i)"
+        >
           Delete
         </button>
       </div>
-      <button class="btn btn-danger mt-2 w-100" type="button" (click)="AddSkill()">
+      <button
+        class="btn btn-danger mt-2 w-100"
+        type="button"
+        (click)="AddSkill()"
+      >
         Add Hobbies
       </button>
     </div>
@@ -229,16 +237,76 @@
             formControlName="degree"
             placeholder="Degree"
           />
-          <button class="btn btn-success" type="button" (click)="DeleteSchool(i)">
+          <button
+            class="btn btn-success"
+            type="button"
+            (click)="DeleteSchool(i)"
+          >
             Delete
           </button>
         </div>
       </div>
-      <button class="btn btn-danger mt-2 w-100" (click)="AddSchool()" type="button">
+      <button
+        class="btn btn-danger mt-2 w-100"
+        (click)="AddSchool()"
+        type="button"
+      >
         Add School
       </button>
     </div>
 
+    <!-- Input with Custom Validators -->
+    <div class="mb-3">
+      <label for="password">Password</label>
+      <input
+        type="text"
+        name="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+      <!-- printing the custom validation error message -->
+      <div
+        *ngIf="
+          reactiveform.get('password').hasError('required') &&
+          reactiveform.get('password')?.invalid &&
+          reactiveform.get('password')?.touched
+        "
+        class="text-danger"
+      >
+        Password Field is required
+      </div>
+      <div
+        *ngIf="
+          reactiveform.get('password').hasError('CheckPasswordStrength') &&
+          reactiveform.get('password')?.invalid &&
+          reactiveform.get('password')?.touched &&
+          !reactiveform.get('password').hasError('required')
+        "
+        class="text-danger"
+      >
+        Password must have One UpperCase, One Lowercase, One Number and One
+        Symbol.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <input
+        type="number"
+        class="form-control"
+        formControlName="age"
+        placeholder="Enter Age"
+      />
+      <div
+        *ngIf="
+          reactiveform.get('age').hasError('Range') &&
+          reactiveform.get('age')?.touched
+        "
+        class="text-danger"
+      >
+        Age must be between 18 - 50
+      </div>
+    </div>
     <button
       class="btn btn-primary mt-2"
       type="submit"
