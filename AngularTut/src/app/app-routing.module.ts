@@ -31,6 +31,7 @@ import { data } from '../data/products';
 import { PipesComponent } from './Pages/pipes/pipes.component';
 import { FormsComponent } from './Pages/forms/forms.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 // Defining the routes
 const routes: Routes = [
@@ -116,6 +117,10 @@ const routes: Routes = [
     children: [
       { path: '', component: FormsComponent },
       { path: 'template-driven', component: TemplatedrivenComponent },
+      {
+        path: 'reactive-form',
+        component: ReactiveformComponent,
+      },
     ],
   },
   { path: '**', component: NotfoundComponent },

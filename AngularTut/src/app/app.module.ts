@@ -9,7 +9,7 @@ import { HelptextComponent } from './Header/helptext/helptext.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { TwowaydatabindingComponent } from './twowaydatabinding/twowaydatabinding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { NgifComponent } from './ngif/ngif.component';
 import { NgstyleComponent } from './ngstyle/ngstyle.component';
@@ -89,6 +89,7 @@ import { CustompipesComponent } from './custompipes/custompipes.component';
 import { MasksensitivePipe } from './custompipes/masksensitive.pipe';
 import { FormsComponent } from './Pages/forms/forms.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 // Creating the injection Token with the string
 export const API_URL = new InjectionToken<string>('API_URL');
@@ -180,11 +181,13 @@ export const API_URL = new InjectionToken<string>('API_URL');
     MasksensitivePipe,
     FormsComponent,
     TemplatedrivenComponent,
+    ReactiveformComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, // Defining any import are there in the project
+    ReactiveFormsModule, // Import the reactive module to use the reactive forms in the angular
   ],
   providers: [
     SubscribeService, // defining the service in the module level.
