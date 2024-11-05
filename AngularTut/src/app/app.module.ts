@@ -90,6 +90,7 @@ import { MasksensitivePipe } from './custompipes/masksensitive.pipe';
 import { FormsComponent } from './Pages/forms/forms.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 
 // Creating the injection Token with the string
 export const API_URL = new InjectionToken<string>('API_URL');
@@ -182,6 +183,7 @@ export const API_URL = new InjectionToken<string>('API_URL');
     FormsComponent,
     TemplatedrivenComponent,
     ReactiveformComponent,
+    FormbuilderComponent,
   ],
   imports: [
     BrowserModule,

@@ -32,6 +32,7 @@ import { PipesComponent } from './Pages/pipes/pipes.component';
 import { FormsComponent } from './Pages/forms/forms.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 
 // Defining the routes
 const routes: Routes = [
@@ -121,6 +122,7 @@ const routes: Routes = [
         path: 'reactive-form',
         component: ReactiveformComponent,
       },
+      { path: 'form-builder', component: FormbuilderComponent }
     ],
   },
   { path: '**', component: NotfoundComponent },
@@ -130,4 +132,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)], // registering the routers array
   exports: [RouterModule], // exporting the router module.
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
