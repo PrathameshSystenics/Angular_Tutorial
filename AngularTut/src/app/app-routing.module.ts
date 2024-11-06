@@ -34,6 +34,7 @@ import { TemplatedrivenComponent } from './templatedriven/templatedriven.compone
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { ObservableComponent } from './Pages/observable/observable.component';
+import { HttpComponent } from './Pages/http/http.component';
 
 // Defining the routes
 const routes: Routes = [
@@ -127,6 +128,7 @@ const routes: Routes = [
     ],
   },
   { path: 'observable', component: ObservableComponent },
+  { path: 'http', component: HttpComponent },
   { path: '**', component: NotfoundComponent },
 ];
 
