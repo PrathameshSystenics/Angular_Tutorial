@@ -1,21 +1,32 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
+import { delay, map, take, tap, timer } from 'rxjs';
 
 @Component({
   selector: 'app-http',
   templateUrl: './http.component.html',
 })
 export class HttpComponent implements OnInit {
+  // inject the instance of the HttpClient in component
   http: HttpClient = inject(HttpClient);
-  apikey: string = 'XVLoTe7tR9Gl6GvpH1yegqNHgn8y7oHS7v5v1WPrsH';
+  posts: any[] = []
+
 
   ngOnInit(): void {
+    // calling the get request method in these
     this.http
       .get(
-        'https://api.jsonsilo.com/public/28cfd1bc-ce83-4daa-8c79-b947d8d6002a'
+        'https://dummyjson.com/posts'
       )
-      .subscribe((data) => {
-        console.log(data);
-      });
+      .pipe(
+        map((value) => {
+          return value['posts']
+        }),
+        take(10),
+        delay(10*1000)).subscribe({
+          next: (val) => {
+            this.posts = val
+          }
+        });
   }
 }
