@@ -131,6 +131,12 @@ const routes: Routes = [
   { path: 'observable', component: ObservableComponent },
   { path: 'http', component: HttpComponent },
   { path: 'interceptor', component: InterceptorComponent },
+  // lazy loading the module 
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((e) => e.AdminModule),
+  },
   { path: '**', component: NotfoundComponent },
 ];
 

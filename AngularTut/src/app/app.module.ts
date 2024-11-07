@@ -94,13 +94,12 @@ import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { ObservableComponent } from './Pages/observable/observable.component';
 import { HttpComponent } from './Pages/http/http.component';
 import {
-  HttpClient,
-  HttpClientModule,
   provideHttpClient,
   withInterceptors,
 } from '@angular/common/http';
 import { InterceptorComponent } from './Pages/interceptor/interceptor.component';
 import { customInterceptorInterceptor } from './Interceptor/custom-interceptor.interceptor';
+import { AdminModule } from './admin/admin.module';
 
 // Creating the injection Token with the string
 export const API_URL = new InjectionToken<string>('API_URL');
@@ -203,6 +202,7 @@ export const API_URL = new InjectionToken<string>('API_URL');
     AppRoutingModule,
     FormsModule, // Defining any import are there in the project
     ReactiveFormsModule, // Import the reactive module to use the reactive forms in the angular
+    AdminModule,// importing the custom created modules in the parent modules
   ],
   providers: [
     SubscribeService, // defining the service in the module level.
