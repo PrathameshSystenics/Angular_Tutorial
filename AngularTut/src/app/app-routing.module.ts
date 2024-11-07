@@ -35,6 +35,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { ObservableComponent } from './Pages/observable/observable.component';
 import { HttpComponent } from './Pages/http/http.component';
+import { InterceptorComponent } from './Pages/interceptor/interceptor.component';
 
 // Defining the routes
 const routes: Routes = [
@@ -129,6 +130,7 @@ const routes: Routes = [
   },
   { path: 'observable', component: ObservableComponent },
   { path: 'http', component: HttpComponent },
+  { path: 'interceptor', component: InterceptorComponent },
   { path: '**', component: NotfoundComponent },
 ];
 

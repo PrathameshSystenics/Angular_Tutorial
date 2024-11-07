@@ -97,7 +97,10 @@ import {
   HttpClient,
   HttpClientModule,
   provideHttpClient,
+  withInterceptors,
 } from '@angular/common/http';
+import { InterceptorComponent } from './Pages/interceptor/interceptor.component';
+import { customInterceptorInterceptor } from './Interceptor/custom-interceptor.interceptor';
 
 // Creating the injection Token with the string
 export const API_URL = new InjectionToken<string>('API_URL');
@@ -193,6 +196,7 @@ export const API_URL = new InjectionToken<string>('API_URL');
     FormbuilderComponent,
     ObservableComponent,
     HttpComponent,
+    InterceptorComponent,
   ],
   imports: [
     BrowserModule,
@@ -203,7 +207,8 @@ export const API_URL = new InjectionToken<string>('API_URL');
   providers: [
     SubscribeService, // defining the service in the module level.
     LogService,
-    provideHttpClient(), // to use the http client to be ready for injection.
+    // defining the interceptor to use.
+    provideHttpClient(withInterceptors([customInterceptorInterceptor])), // to use the http client to be ready for injection.
     { provide: API_URL, useValue: 'https://dummyjson.com/comments' }, // at the end angular converts these into the object.
   ],
   bootstrap: [AppComponent],
