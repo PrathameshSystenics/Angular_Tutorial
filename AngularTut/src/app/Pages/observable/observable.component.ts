@@ -283,4 +283,19 @@ export class ObservableComponent {
     this.subject$.complete();
   }
   //#endregion
+
+  //#region subject listen to different tabs
+  count: number = 1;
+  countsubject: Subject<number> = new Subject<number>();
+
+  ngOnInit() {
+    this.countsubject.subscribe((data) => {
+      this.count = data;
+    });
+  }
+
+  BtnSubjectTrial(inc: -1 | 1) {
+    this.countsubject.next(this.count + inc);
+  }
+  //#endregion
 }
