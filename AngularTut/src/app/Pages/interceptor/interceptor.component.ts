@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { delay, map, take } from 'rxjs';
+import { environment } from '../../../environments/environment.development';
 
 @Component({
   selector: 'app-interceptor',
@@ -13,8 +14,11 @@ export class InterceptorComponent {
   errorMessage: any = null;
   respmsg: string = '';
 
+  // accessing teh env file
+
   ngOnInit(): void {
     this.isloading = true;
+    console.log(environment.MY_API)
     // calling the get request method in these
 
     // passing the query params to it

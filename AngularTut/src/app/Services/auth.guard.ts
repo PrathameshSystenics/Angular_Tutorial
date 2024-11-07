@@ -8,8 +8,6 @@ import {
 } from '@angular/router';
 import { AuthService } from './auth.service';
 import { inject } from '@angular/core';
-import { RouteguardComponent } from '../Pages/routeguard/routeguard.component';
-import { LoginComponent } from '../login/login.component';
 import { CandeactivateformComponent } from '../candeactivateform/candeactivateform.component';
 import { data, Products } from '../../data/products';
 
