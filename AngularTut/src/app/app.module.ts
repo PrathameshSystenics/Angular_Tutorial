@@ -100,6 +100,8 @@ import {
 import { InterceptorComponent } from './Pages/interceptor/interceptor.component';
 import { customInterceptorInterceptor } from './Interceptor/custom-interceptor.interceptor';
 import { AdminModule } from './admin/admin.module';
+import { SignalsComponent } from './signals/signals.component';
+import { SignalChildComponent } from './signals/signal-child/signal-child.component';
 
 // Creating the injection Token with the string
 export const API_URL = new InjectionToken<string>('API_URL');
@@ -196,6 +198,8 @@ export const API_URL = new InjectionToken<string>('API_URL');
     ObservableComponent,
     HttpComponent,
     InterceptorComponent,
+    SignalsComponent,
+    SignalChildComponent,
   ],
   imports: [
     BrowserModule,
