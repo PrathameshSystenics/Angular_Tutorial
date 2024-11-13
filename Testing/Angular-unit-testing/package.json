@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "jsonserver": "json-server db.json"
+    "jsonserver": "json-server db.json",
+    "codecoverage":"ng test --no-watch --code-coverage && cd ./coverage/test-new-prep && vite"
   },
   "private": true,
   "dependencies": {
