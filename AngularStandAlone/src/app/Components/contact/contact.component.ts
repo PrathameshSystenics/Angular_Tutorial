@@ -31,6 +31,8 @@ export class ContactComponent {
     if (this.contactForm.valid) {
       this.contactForm.reset();
       alert("We will Contact You Soon")
+    } else {
+      alert("Please Enter Correct Details")
     }
   }
 
